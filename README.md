@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HAIDEN ANGE — Spécialiste en Visibilité Digitale</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{
+  --bg:#08080a;
+  --bg-2:#131217;
+  --bg-3:#1a181e;
+  --gold:#c9a659;
+  --gold-light:#e9d9a8;
+  --gold-deep:#8c6d2f;
+  --white:#f6f3ec;
+  --muted:#a9a49a;
+  --line:rgba(201,166,89,0.22);
+  --green:#3ac07c;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:'Manrope',sans-serif;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+h1,h2,h3,.serif{font-family:'Fraunces',serif;}
+a{color:inherit; text-decoration:none;}
+img{max-width:100%; display:block;}
+.container{max-width:1180px; margin:0 auto; padding:0 24px;}
+.eyebrow{
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:12px; letter-spacing:2.5px; text-transform:uppercase;
+  color:var(--gold); font-weight:600;
+}
+.eyebrow::before{content:''; width:22px; height:1px; background:var(--gold);}
+section{padding:110px 0;}
+@media(max-width:768px){ section{padding:68px 0;} body{padding-bottom:64px;} }
+
+/* ---------- MARQUEE SOCIAL PROOF BAR ---------- */
+.marquee-bar{
+  background:var(--bg-2); border-bottom:1px solid var(--line);
+  overflow:hidden; white-space:nowrap; position:relative; height:38px; display:flex; align-items:center;
+}
+.marquee-track{display:inline-flex; gap:48px; animation:scrollLeft 28s linear infinite; padding-left:100%;}
+.marquee-track span{font-size:12.5px; color:var(--muted); display:inline-flex; align-items:center; gap:8px;}
+.marquee-track span i{color:var(--green); font-size:8px;}
+@keyframes scrollLeft{ from{transform:translateX(0);} to{transform:translateX(-100%);} }
+
+/* ---------- NAV ---------- */
+header{
+  position:fixed; top:38px; left:0; right:0; z-index:100;
+  background:rgba(8,8,10,0.72); backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+nav{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:15px 24px; max-width:1180px; margin:0 auto;
+}
+.brand{display:flex; align-items:center; gap:12px;}
+.seal{
+  width:38px; height:38px; border-radius:50%;
+  border:1px solid var(--gold); display:flex; align-items:center; justify-content:center;
+  font-family:'Fraunces',serif; font-weight:600; font-size:14px; color:var(--gold);
+  position:relative;
+}
+.seal::before{
+  content:''; position:absolute; inset:4px; border-radius:50%; border:1px solid rgba(201,166,89,0.35);
+}
+.brand-text{font-family:'Fraunces',serif; font-size:17px; letter-spacing:1px;}
+.brand-text span{color:var(--gold);}
+.nav-links{display:flex; gap:30px; font-size:14px; color:var(--muted);}
+.nav-links a:hover{color:var(--gold-light);}
+.nav-right{display:flex; align-items:center; gap:14px;}
+.nav-rating{display:flex; align-items:center; gap:6px; font-size:12.5px; color:var(--muted);}
+.nav-rating i{color:var(--gold); font-size:11px;}
+.nav-cta{
+  display:flex; align-items:center; gap:8px;
+  border:1px solid var(--gold); color:var(--gold);
+  padding:9px 18px; border-radius:2px; font-size:13px; letter-spacing:0.5px; font-weight:600;
+  transition:all .25s ease;
+}
+.nav-cta:hover{background:var(--gold); color:#0a0a0c;}
+.menu-toggle{display:none; font-size:20px; color:var(--gold); background:none; border:none;}
+.mobile-menu{
+  display:none; flex-direction:column; background:var(--bg-2); border-top:1px solid var(--line);
+  padding:8px 24px 18px;
+}
+.mobile-menu a{padding:13px 0; font-size:14.5px; color:var(--muted); border-bottom:1px solid var(--line);}
+.mobile-menu a:last-child{border-bottom:none; color:var(--gold-light); margin-top:4px;}
+.mobile-menu.open{display:flex;}
+@media(max-width:900px){
+  .nav-links{display:none;}
+  .nav-rating{display:none;}
+  .menu-toggle{display:block;}
+  .nav-right a[href="espace-client.html"]{display:none;}
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  min-height:100vh; display:flex; align-items:center;
+  padding-top:150px;
+  background:
+    radial-gradient(ellipse 900px 500px at 80% -10%, rgba(201,166,89,0.14), transparent 60%),
+    radial-gradient(ellipse 700px 400px at 0% 100%, rgba(201,166,89,0.08), transparent 60%),
+    var(--bg);
+  position:relative;
+}
+.hero-grid{
+  display:grid; grid-template-columns:1.15fr 0.85fr; gap:64px; align-items:center;
+}
+@media(max-width:960px){ .hero-grid{grid-template-columns:1fr;} }
+.hero h1{
+  font-size:clamp(38px,5.2vw,62px); font-weight:500; line-height:1.08; margin:22px 0 24px;
+  letter-spacing:-0.5px;
+}
+.hero h1 em{color:var(--gold); font-style:italic; font-weight:400;}
+.hero p.lead{color:var(--muted); font-size:17px; max-width:480px; margin-bottom:30px;}
+.btn-row{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:34px;}
+.btn{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:15px 28px; border-radius:2px; font-size:14px; font-weight:700; letter-spacing:0.4px;
+  transition:all .25s ease; cursor:pointer; border:1px solid transparent;
+}
+.btn-gold{background:var(--gold); color:#0a0a0c;}
+.btn-gold:hover{background:var(--gold-light); transform:translateY(-2px);}
+.btn-outline{border-color:var(--gold); color:var(--gold-light);}
+.btn-outline:hover{background:rgba(201,166,89,0.1); transform:translateY(-2px);}
+
+.trust-strip{display:flex; flex-wrap:wrap; gap:22px;}
+.trust-item{display:flex; align-items:center; gap:8px; font-size:12.5px; color:var(--muted);}
+.trust-item i{color:var(--gold); font-size:14px;}
+
+.hero-panel{
+  border:1px solid var(--line); border-radius:4px; padding:34px;
+  background:linear-gradient(160deg, var(--bg-2), var(--bg));
+  position:relative;
+}
+.hero-panel::before{
+  content:''; position:absolute; top:-1px; left:-1px; right:-1px; height:2px;
+  background:linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.hero-panel-title{display:flex; justify-content:space-between; align-items:center; font-size:13px; color:var(--muted); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:22px;}
+.live-dot{width:7px; height:7px; border-radius:50%; background:var(--green); display:inline-block; margin-right:6px; animation:pulse 1.6s infinite;}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(58,192,124,0.5);} 70%{box-shadow:0 0 0 7px rgba(58,192,124,0);} 100%{box-shadow:0 0 0 0 rgba(58,192,124,0);} }
+.stat-grid{display:grid; grid-template-columns:1fr 1fr; gap:26px; margin-bottom:26px;}
+.stat-num{font-family:'Fraunces',serif; font-size:30px; color:var(--gold-light); font-weight:500;}
+.stat-label{font-size:12.5px; color:var(--muted); margin-top:4px;}
+.platform-row{display:flex; gap:16px; border-top:1px solid var(--line); padding-top:22px; color:var(--muted); font-size:19px;}
+
+/* ---------- SECTION HEAD ---------- */
+.section-head{max-width:640px; margin-bottom:56px;}
+.section-head h2{font-size:clamp(28px,3.4vw,42px); font-weight:500; margin-top:16px; letter-spacing:-0.3px;}
+.section-head p{color:var(--muted); margin-top:14px; font-size:15.5px;}
+.section-head.center{margin-left:auto; margin-right:auto; text-align:center;}
+
+/* ---------- SERVICES ---------- */
+.svc-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+@media(max-width:900px){ .svc-grid{grid-template-columns:repeat(2,1fr);} }
+@media(max-width:520px){ .svc-grid{grid-template-columns:1fr;} }
+.svc-card{background:var(--bg); padding:36px 26px; transition:background .25s ease;}
+.svc-card:hover{background:var(--bg-2);}
+.svc-card i{font-size:24px; color:var(--gold); margin-bottom:20px;}
+.svc-card h3{font-size:17px; font-weight:500; margin-bottom:12px; font-family:'Manrope',sans-serif;}
+.svc-card ul{list-style:none; font-size:13px; color:var(--muted);}
+.svc-card li{padding:4px 0; display:flex; align-items:center; gap:8px;}
+.svc-card li::before{content:'—'; color:var(--gold);}
+
+/* ---------- CALCULATOR ---------- */
+.calc-box{
+  border:1px solid var(--line); border-radius:6px; padding:40px;
+  background:linear-gradient(160deg, var(--bg-2), var(--bg));
+  display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; margin-bottom:70px;
+}
+@media(max-width:860px){ .calc-box{grid-template-columns:1fr; padding:28px;} }
+.calc-select-row{display:flex; gap:12px; margin-bottom:26px; flex-wrap:wrap;}
+.calc-chip{
+  padding:9px 16px; border:1px solid var(--line); border-radius:2px; font-size:13px; color:var(--muted);
+  cursor:pointer; background:transparent; font-family:'Manrope',sans-serif; display:flex; align-items:center; gap:8px;
+}
+.calc-chip.active{border-color:var(--gold); color:var(--gold-light); background:rgba(201,166,89,0.08);}
+.calc-slider-label{display:flex; justify-content:space-between; font-size:13px; color:var(--muted); margin-bottom:10px;}
+.calc-slider-label b{color:var(--gold-light); font-family:'Fraunces',serif; font-size:16px; font-weight:500;}
+input[type=range]{
+  -webkit-appearance:none; width:100%; height:2px; background:var(--line); outline:none; margin-bottom:30px;
+}
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none; width:18px; height:18px; border-radius:50%; background:var(--gold); cursor:pointer; border:3px solid var(--bg);
+}
+.calc-price-display{
+  text-align:center; padding:34px; border:1px solid var(--line); border-radius:4px; background:var(--bg);
+}
+.calc-price-label{font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:1.5px; margin-bottom:12px;}
+.calc-price{font-family:'Fraunces',serif; font-size:44px; color:var(--gold-light); font-weight:500; margin-bottom:6px;}
+.calc-sub{font-size:12.5px; color:var(--muted); margin-bottom:24px;}
+
+/* ---------- PRICING ---------- */
+.price-tabs{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:40px;}
+.price-tab{
+  padding:10px 20px; border:1px solid var(--line); border-radius:2px; font-size:13px;
+  color:var(--muted); cursor:pointer; background:transparent; font-family:'Manrope',sans-serif;
+  transition:all .2s ease;
+}
+.price-tab.active{border-color:var(--gold); color:var(--gold-light); background:rgba(201,166,89,0.08);}
+.price-panel{display:none;}
+.price-panel.active{display:block;}
+.price-table{width:100%; border-collapse:collapse; border:1px solid var(--line);}
+.price-table th, .price-table td{padding:16px 20px; border-bottom:1px solid var(--line); text-align:left; font-size:14.5px;}
+.price-table th{color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:1.2px; font-weight:600;}
+.price-table td:last-child, .price-table th:last-child{text-align:right;}
+.price-table tr:last-child td{border-bottom:none;}
+.price-table tr td{cursor:pointer; transition:background .2s ease;}
+.price-table tr:hover td{background:rgba(201,166,89,0.05);}
+.price-val{font-family:'Fraunces',serif; color:var(--gold-light); font-size:16px; display:inline-flex; align-items:center; gap:10px;}
+.price-val i{font-size:12px; opacity:0; transition:opacity .2s ease;}
+.price-table tr:hover .price-val i{opacity:1;}
+
+/* ---------- GUARANTEES ---------- */
+.guarantee-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+@media(max-width:860px){ .guarantee-grid{grid-template-columns:1fr 1fr;} }
+@media(max-width:520px){ .guarantee-grid{grid-template-columns:1fr;} }
+.guarantee-card{background:var(--bg-2); padding:34px 26px;}
+.guarantee-card i{font-size:22px; color:var(--gold); margin-bottom:16px; display:block;}
+.guarantee-card h3{font-size:15.5px; font-weight:500; margin-bottom:8px;}
+.guarantee-card p{font-size:13px; color:var(--muted);}
+
+/* ---------- PAYMENT METHODS ---------- */
+.pay-row{display:flex; gap:14px; flex-wrap:wrap; align-items:center;}
+.pay-pill{
+  display:flex; align-items:center; gap:8px; border:1px solid var(--line); border-radius:2px;
+  padding:10px 16px; font-size:12.5px; color:var(--muted);
+}
+.pay-pill i{color:var(--gold); font-size:14px;}
+
+/* ---------- ORDER TRACKING ---------- */
+.track-box{
+  border:1px solid var(--line); border-radius:6px; padding:44px;
+  background:linear-gradient(160deg, var(--bg-2), var(--bg));
+}
+@media(max-width:768px){ .track-box{padding:26px;} }
+.track-form{display:flex; gap:12px; margin-bottom:28px; flex-wrap:wrap;}
+.track-form input{
+  flex:1; min-width:220px; background:var(--bg); border:1px solid var(--line); color:var(--white);
+  padding:14px 18px; border-radius:2px; font-family:'Manrope',sans-serif; font-size:14px;
+}
+.track-form input:focus{outline:none; border-color:var(--gold);}
+.track-result{display:none;}
+.track-result.show{display:block;}
+.track-steps{display:flex; justify-content:space-between; position:relative; margin-top:10px;}
+.track-steps::before{content:''; position:absolute; top:15px; left:0; right:0; height:1px; background:var(--line);}
+.track-step{text-align:center; position:relative; z-index:1; flex:1;}
+.track-step .dot{width:32px; height:32px; border-radius:50%; background:var(--bg); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; margin:0 auto 10px; font-size:13px; color:var(--muted);}
+.track-step.done .dot{border-color:var(--gold); color:var(--gold); background:rgba(201,166,89,0.1);}
+.track-step p{font-size:12px; color:var(--muted);}
+.track-step.done p{color:var(--gold-light);}
+
+/* ---------- WHY US ---------- */
+.why-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+@media(max-width:860px){ .why-grid{grid-template-columns:1fr 1fr;} }
+@media(max-width:520px){ .why-grid{grid-template-columns:1fr;} }
+.why-card{background:var(--bg); padding:38px 28px;}
+.why-card i{font-size:22px; color:var(--gold); display:block; margin-bottom:16px;}
+.why-card h3{font-size:16.5px; font-weight:500; margin-bottom:8px;}
+.why-card p{font-size:13.5px; color:var(--muted);}
+
+/* ---------- HOW IT WORKS ---------- */
+.steps{display:grid; grid-template-columns:repeat(4,1fr); gap:34px;}
+@media(max-width:860px){ .steps{grid-template-columns:1fr 1fr;} }
+@media(max-width:520px){ .steps{grid-template-columns:1fr;} }
+.step{text-align:left; position:relative; padding-top:8px;}
+.step-num{
+  width:46px; height:46px; border-radius:50%; border:1px solid var(--gold);
+  display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif;
+  color:var(--gold-light); font-size:16px; margin-bottom:20px;
+}
+.step h3{font-size:15.5px; font-weight:500; margin-bottom:8px;}
+.step p{font-size:13.5px; color:var(--muted);}
+
+/* ---------- TESTIMONIALS ---------- */
+.rating-badge{display:flex; align-items:center; gap:16px; margin-bottom:40px; justify-content:center; flex-wrap:wrap;}
+.rating-num{font-family:'Fraunces',serif; font-size:36px; color:var(--gold-light);}
+.rating-stars{color:var(--gold); font-size:16px; letter-spacing:3px;}
+.rating-sub{font-size:12.5px; color:var(--muted);}
+.carousel-wrap{position:relative; overflow:hidden;}
+.carousel-track{display:flex; transition:transform .5s ease;}
+.testi{min-width:100%; padding:0 4px;}
+.testi-inner{
+  border:1px solid var(--line); border-radius:4px; padding:40px; text-align:center; max-width:640px; margin:0 auto;
+  background:var(--bg-2);
+}
+.stars{color:var(--gold); font-size:14px; margin-bottom:18px; letter-spacing:3px;}
+.testi-inner p.quote{font-family:'Fraunces',serif; font-style:italic; font-size:19px; line-height:1.5; margin-bottom:20px;}
+.testi-name{font-size:13px; color:var(--muted);}
+.carousel-dots{display:flex; justify-content:center; gap:8px; margin-top:28px;}
+.dot2{width:7px; height:7px; border-radius:50%; background:var(--line); cursor:pointer;}
+.dot2.active{background:var(--gold);}
+
+/* ---------- FAQ ---------- */
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-q{display:flex; justify-content:space-between; align-items:center; padding:24px 0; cursor:pointer; font-size:16px; font-weight:500;}
+.faq-q i{color:var(--gold); transition:transform .3s ease;}
+.faq-item.open .faq-q i{transform:rotate(45deg);}
+.faq-a{max-height:0; overflow:hidden; transition:max-height .35s ease;}
+.faq-a p{color:var(--muted); font-size:14.5px; padding-bottom:22px; max-width:640px;}
+
+/* ---------- CONTACT ---------- */
+.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:64px;}
+@media(max-width:860px){ .contact-grid{grid-template-columns:1fr;} }
+.contact-info-item{display:flex; gap:16px; margin-bottom:26px;}
+.contact-info-item i{color:var(--gold); font-size:18px; margin-top:3px;}
+.contact-info-item h4{font-size:14.5px; font-weight:600; margin-bottom:4px;}
+.contact-info-item p{color:var(--muted); font-size:13.5px;}
+.field{margin-bottom:18px;}
+.field label{display:block; font-size:12px; color:var(--muted); letter-spacing:1px; text-transform:uppercase; margin-bottom:8px;}
+.field input, .field textarea{
+  width:100%; background:var(--bg-2); border:1px solid var(--line); color:var(--white);
+  padding:13px 16px; border-radius:2px; font-family:'Manrope',sans-serif; font-size:14px;
+}
+.field input:focus, .field textarea:focus{outline:none; border-color:var(--gold);}
+.field textarea{resize:vertical; min-height:110px;}
+
+/* ---------- FOOTER ---------- */
+footer{border-top:1px solid var(--line); padding:56px 0 32px;}
+.footer-top{display:flex; justify-content:space-between; flex-wrap:wrap; gap:34px; margin-bottom:34px;}
+.footer-links{display:flex; gap:32px; font-size:13.5px; color:var(--muted); flex-wrap:wrap;}
+.footer-links a:hover{color:var(--gold-light);}
+.footer-bottom{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12.5px; color:var(--muted); border-top:1px solid var(--line); padding-top:26px; margin-top:26px;}
+
+/* ---------- FLOATING ---------- */
+.wa-float{
+  position:fixed; bottom:26px; right:26px; z-index:200;
+  width:58px; height:58px; border-radius:50%; background:#1fae52;
+  display:flex; align-items:center; justify-content:center; color:#fff; font-size:26px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.4);
+  border:2px solid rgba(255,255,255,0.15);
+}
+.back-top{
+  position:fixed; bottom:26px; left:26px; z-index:200;
+  width:44px; height:44px; border-radius:50%; border:1px solid var(--gold); color:var(--gold);
+  background:rgba(10,10,12,0.8); display:flex; align-items:center; justify-content:center;
+  opacity:0; pointer-events:none; transition:opacity .3s ease;
+}
+.back-top.show{opacity:1; pointer-events:auto;}
+
+.toast{
+  position:fixed; bottom:26px; left:26px; z-index:199;
+  background:var(--bg-2); border:1px solid var(--line); border-radius:4px; padding:14px 18px;
+  display:flex; align-items:center; gap:12px; max-width:290px;
+  transform:translateY(120%); transition:transform .4s ease; box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+.toast.show{transform:translateY(0);}
+.toast i.icon{color:var(--green); font-size:18px;}
+.toast p{font-size:12.5px; color:var(--white); line-height:1.4;}
+.toast span{color:var(--muted); font-size:11px;}
+
+.mobile-cta{
+  display:none; position:fixed; bottom:0; left:0; right:0; z-index:198;
+  background:rgba(8,8,10,0.95); backdrop-filter:blur(10px); border-top:1px solid var(--line);
+  padding:12px 16px; gap:10px;
+}
+@media(max-width:768px){ .mobile-cta{display:flex;} .back-top{display:none;} .toast{bottom:80px;} .wa-float{display:none;} }
+.mobile-cta a{flex:1; text-align:center; padding:13px; border-radius:2px; font-size:13px; font-weight:700;}
+.mobile-cta .m1{background:var(--gold); color:#0a0a0c;}
+.mobile-cta .m2{border:1px solid #1fae52; color:#3ac07c; display:flex; align-items:center; justify-content:center; gap:6px;}
+
+.reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1; transform:translateY(0);}
+
+/* ---------- MOBILE REFINEMENTS ---------- */
+@media(max-width:600px){
+  .container{padding:0 18px;}
+  nav{padding:13px 16px;}
+  .brand-text{font-size:15px;}
+  .nav-right{gap:10px;}
+  .nav-cta{padding:8px 12px; font-size:12px;}
+  .nav-cta span, .nav-cta{white-space:nowrap;}
+  .price-table th, .price-table td{padding:12px 10px; font-size:13px;}
+  .price-val{font-size:13.5px; gap:6px;}
+  .price-tabs{gap:8px;}
+  .price-tab{padding:8px 14px; font-size:12px;}
+  .calc-box{padding:22px 18px;}
+  .calc-price{font-size:32px;}
+  .track-form{flex-direction:column;}
+  .track-form button{width:100%; justify-content:center;}
+  .track-steps{flex-wrap:wrap; row-gap:18px;}
+  .track-steps::before{display:none;}
+  .stat-grid{gap:16px;}
+  .stat-num{font-size:24px;}
+  .hero-panel{padding:24px;}
+  .contact-info-item p{font-size:13px;}
+  .footer-top{gap:24px;}
+  .footer-links{gap:18px 24px; font-size:13px;}
+  section{padding:56px 0;}
+}
+@media(max-width:380px){
+  .nav-cta i{display:none;}
+  .stat-grid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span><i class="fa-solid fa-circle"></i> Aïcha K. vient de commander 2 000 abonnés Instagram — il y a 3 min</span>
+    <span><i class="fa-solid fa-circle"></i> Yves T. vient de commander 5 000 vues TikTok — il y a 7 min</span>
+    <span><i class="fa-solid fa-circle"></i> Sarah D. vient de commander une campagne publicitaire — il y a 12 min</span>
+    <span><i class="fa-solid fa-circle"></i> Moussa B. vient de commander 1 000 likes Facebook — il y a 18 min</span>
+    <span><i class="fa-solid fa-circle"></i> Aïcha K. vient de commander 2 000 abonnés Instagram — il y a 3 min</span>
+    <span><i class="fa-solid fa-circle"></i> Yves T. vient de commander 5 000 vues TikTok — il y a 7 min</span>
+    <span><i class="fa-solid fa-circle"></i> Sarah D. vient de commander une campagne publicitaire — il y a 12 min</span>
+    <span><i class="fa-solid fa-circle"></i> Moussa B. vient de commander 1 000 likes Facebook — il y a 18 min</span>
+  </div>
+</div>
+
+<header>
+  <nav>
+    <div class="brand">
+      <div class="seal">HA</div>
+      <div class="brand-text">HAIDEN <span>ANGE</span></div>
+    </div>
+    <div class="nav-links">
+      <a href="#accueil">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#suivi">Suivi</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 4,9/5</div>
+      <a href="espace-client.html" style="font-size:13px; color:var(--muted);"><i class="fa-solid fa-user"></i> Connexion</a>
+      <a class="nav-cta" href="https://wa.me/2250714371752" target="_blank"><i class="fa-brands fa-whatsapp"></i> Commander</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#accueil">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#suivi">Suivi</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a href="espace-client.html"><i class="fa-solid fa-user"></i> Connexion / Créer un compte</a>
+  </div>
+</header>
+
+<div id="welcomeBanner" style="display:none; position:fixed; top:38px; left:0; right:0; z-index:99; background:rgba(58,192,124,0.12); border-bottom:1px solid rgba(58,192,124,0.3); color:#8fe0b3; text-align:center; font-size:13px; padding:10px;">
+  <i class="fa-solid fa-circle-check"></i> Bienvenue ! Votre compte est prêt — choisissez un service ci-dessous pour commander.
+</div>
+
+<section class="hero" id="accueil">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Croissance & visibilité digitale</span>
+      <h1>Boostez votre <em>visibilité</em> sur les réseaux sociaux</h1>
+      <p class="lead">Développez votre audience, augmentez votre crédibilité et attirez plus de clients grâce à un accompagnement premium, rapide et sécurisé.</p>
+      <div class="btn-row">
+        <a href="#tarifs" class="btn btn-gold"><i class="fa-solid fa-crown"></i> Commander maintenant</a>
+        <a href="https://wa.me/2250714371752" target="_blank" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> Nous contacter sur WhatsApp</a>
+      </div>
+      <div class="trust-strip">
+        <div class="trust-item"><i class="fa-solid fa-lock"></i> Aucun mot de passe requis</div>
+        <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> Paiement sécurisé</div>
+        <div class="trust-item"><i class="fa-solid fa-rotate"></i> Réapprovisionnement 60 jours</div>
+        <div class="trust-item"><i class="fa-solid fa-headset"></i> Support 7j/7</div>
+      </div>
+    </div>
+    <div class="hero-panel reveal">
+      <div class="hero-panel-title"><span><span class="live-dot"></span>Résultats en direct</span></div>
+      <div class="stat-grid">
+        <div><div class="stat-num" data-count="256000">0</div><div class="stat-label">Abonnés générés</div></div>
+        <div><div class="stat-num" data-count="68" data-suffix="%">0</div><div class="stat-label">Engagement moyen</div></div>
+        <div><div class="stat-num" data-count="24" data-suffix="h">0</div><div class="stat-label">Livraison rapide</div></div>
+        <div><div class="stat-num" data-count="1400" data-suffix="+">0</div><div class="stat-label">Clients servis</div></div>
+      </div>
+      <div class="platform-row">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-tiktok"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Ce que nous faisons</span>
+      <h2>Une présence forte, sur chaque plateforme</h2>
+      <p>Des services pensés pour les particuliers, entreprises, créateurs de contenu, influenceurs, artistes et commerçants.</p>
+    </div>
+  </div>
+  <div class="svc-grid reveal">
+    <div class="svc-card"><i class="fa-brands fa-facebook"></i><h3>Facebook</h3><ul><li>Croissance rapide</li><li>Résultats réels</li><li>Livraison rapide</li></ul></div>
+    <div class="svc-card"><i class="fa-brands fa-instagram"></i><h3>Instagram</h3><ul><li>Croissance rapide</li><li>Résultats réels</li><li>Livraison rapide</li></ul></div>
+    <div class="svc-card"><i class="fa-brands fa-tiktok"></i><h3>TikTok</h3><ul><li>Croissance rapide</li><li>Résultats réels</li><li>Livraison rapide</li></ul></div>
+    <div class="svc-card"><i class="fa-brands fa-youtube"></i><h3>YouTube</h3><ul><li>Croissance rapide</li><li>Résultats réels</li><li>Livraison rapide</li></ul></div>
+    <div class="svc-card"><i class="fa-brands fa-linkedin"></i><h3>LinkedIn</h3><ul><li>Croissance rapide</li><li>Résultats réels</li><li>Livraison rapide</li></ul></div>
+  </div>
+</section>
+
+<section id="tarifs">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Tarification</span>
+      <h2>Des offres claires, sans surprise</h2>
+      <p>Ajustez la quantité et voyez le prix se calculer en direct, ou consultez le tarif complet ci-dessous. Tous les prix sont en FCFA.</p>
+    </div>
+
+    <div class="calc-box reveal">
+      <div>
+        <div class="calc-select-row">
+          <button class="calc-chip active" data-rate="9" data-max="10000" data-label="abonnés Instagram"><i class="fa-brands fa-instagram"></i> Abonnés Instagram</button>
+          <button class="calc-chip" data-rate="7.5" data-max="20000" data-label="abonnés TikTok"><i class="fa-brands fa-tiktok"></i> Abonnés TikTok</button>
+          <button class="calc-chip" data-rate="4.5" data-max="10000" data-label="likes Instagram"><i class="fa-solid fa-heart"></i> Likes</button>
+          <button class="calc-chip" data-rate="1.4" data-max="10000" data-label="vues TikTok"><i class="fa-brands fa-tiktok"></i> Vues</button>
+        </div>
+        <div class="calc-slider-label">Quantité <b id="qtyOut">1 000</b></div>
+        <input type="range" id="qtySlider" min="500" max="10000" step="500" value="1000">
+      </div>
+      <div class="calc-price-display">
+        <div class="calc-price-label">Prix estimé</div>
+        <div class="calc-price" id="calcPrice">9 000 FCFA</div>
+        <div class="calc-sub" id="calcSub">1 000 abonnés Instagram</div>
+        <a href="#" id="calcOrderBtn" class="btn btn-gold" style="width:100%; justify-content:center;"><i class="fa-brands fa-whatsapp"></i> Commander cette offre</a>
+      </div>
+    </div>
+
+    <div class="price-tabs reveal">
+      <button class="price-tab active" data-tab="abonnes">Abonnés</button>
+      <button class="price-tab" data-tab="tiktok">Abonnés TikTok</button>
+      <button class="price-tab" data-tab="likes">Likes</button>
+      <button class="price-tab" data-tab="vues">Vues</button>
+      <button class="price-tab" data-tab="live">Spectateurs en direct</button>
+      <button class="price-tab" data-tab="info">Services informatiques</button>
+      <button class="price-tab" data-tab="pub">Publicité & Promotion</button>
+    </div>
+
+    <div class="price-panel active" id="abonnes">
+      <table class="price-table"><thead><tr><th>Abonnés haute qualité</th><th>Prix</th></tr></thead><tbody>
+        <tr onclick="orderVia('1 000 abonnés','9 000 FCFA')"><td>1 000 abonnés</td><td><span class="price-val">9 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('2 000 abonnés','17 000 FCFA')"><td>2 000 abonnés</td><td><span class="price-val">17 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('5 000 abonnés','42 000 FCFA')"><td>5 000 abonnés</td><td><span class="price-val">42 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('10 000 abonnés','80 000 FCFA')"><td>10 000 abonnés</td><td><span class="price-val">80 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="price-panel" id="tiktok">
+      <table class="price-table"><thead><tr><th>Abonnés TikTok haute qualité</th><th>Prix</th></tr></thead><tbody>
+        <tr onclick="orderVia('1 000 abonnés TikTok','9 000 FCFA')"><td>1 000 abonnés</td><td><span class="price-val">9 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('2 000 abonnés TikTok','17 000 FCFA')"><td>2 000 abonnés</td><td><span class="price-val">17 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('5 000 abonnés TikTok','42 000 FCFA')"><td>5 000 abonnés</td><td><span class="price-val">42 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('10 000 abonnés TikTok','80 000 FCFA')"><td>10 000 abonnés</td><td><span class="price-val">80 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('15 000 abonnés TikTok','115 000 FCFA')"><td>15 000 abonnés</td><td><span class="price-val">115 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('20 000 abonnés TikTok','150 000 FCFA')"><td>20 000 abonnés</td><td><span class="price-val">150 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+      </tbody></table>
+      <p style="color:var(--muted); font-size:13px; margin-top:18px;">Livraison progressive pour un profil de compte crédible. Garantie de réapprovisionnement 60 jours incluse.</p>
+    </div>
+
+    <div class="price-panel" id="likes">
+      <table class="price-table"><thead><tr><th>Likes</th><th>Prix</th></tr></thead><tbody>
+        <tr onclick="orderVia('500 likes','2 500 FCFA')"><td>500 likes</td><td><span class="price-val">2 500 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('1 000 likes','4 500 FCFA')"><td>1 000 likes</td><td><span class="price-val">4 500 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('2 000 likes','8 500 FCFA')"><td>2 000 likes</td><td><span class="price-val">8 500 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('5 000 likes','20 000 FCFA')"><td>5 000 likes</td><td><span class="price-val">20 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('10 000 likes','38 000 FCFA')"><td>10 000 likes</td><td><span class="price-val">38 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="price-panel" id="vues">
+      <table class="price-table"><thead><tr><th>Vues</th><th>Prix</th></tr></thead><tbody>
+        <tr onclick="orderVia('1 000 vues','1 500 FCFA')"><td>1 000 vues</td><td><span class="price-val">1 500 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('5 000 vues','5 000 FCFA')"><td>5 000 vues</td><td><span class="price-val">5 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('10 000 vues','8 000 FCFA')"><td>10 000 vues</td><td><span class="price-val">8 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('50 000 vues','35 000 FCFA')"><td>50 000 vues</td><td><span class="price-val">35 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('100 000 vues','65 000 FCFA')"><td>100 000 vues</td><td><span class="price-val">65 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="price-panel" id="live">
+      <table class="price-table"><thead><tr><th>Spectateurs en direct</th><th>Prix</th></tr></thead><tbody>
+        <tr onclick="orderVia('50 spectateurs','5 000 FCFA')"><td>50 spectateurs</td><td><span class="price-val">5 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('100 spectateurs','9 000 FCFA')"><td>100 spectateurs</td><td><span class="price-val">9 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('200 spectateurs','17 000 FCFA')"><td>200 spectateurs</td><td><span class="price-val">17 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('500 spectateurs','40 000 FCFA')"><td>500 spectateurs</td><td><span class="price-val">40 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('1 000 spectateurs','75 000 FCFA')"><td>1 000 spectateurs</td><td><span class="price-val">75 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="price-panel" id="info">
+      <table class="price-table"><thead><tr><th>Services informatiques</th><th>Prix</th></tr></thead><tbody>
+        <tr onclick="orderVia('Création de compte professionnel','5 000 FCFA')"><td>Création de compte professionnel</td><td><span class="price-val">5 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('Création de page Facebook','5 000 FCFA')"><td>Création de page Facebook</td><td><span class="price-val">5 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('Configuration Facebook Business','10 000 FCFA')"><td>Configuration Facebook Business</td><td><span class="price-val">10 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('Optimisation de profil TikTok','5 000 FCFA')"><td>Optimisation de profil TikTok</td><td><span class="price-val">5 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('Conseil en visibilité réseaux sociaux','10 000 FCFA')"><td>Conseil en visibilité réseaux sociaux</td><td><span class="price-val">10 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="price-panel" id="pub">
+      <table class="price-table"><thead><tr><th>Publicité & promotion</th><th>Prix</th></tr></thead><tbody>
+        <tr onclick="orderVia('Publication publicitaire','5 000 FCFA')"><td>Publication publicitaire</td><td><span class="price-val">5 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('Campagne publicitaire basique','15 000 FCFA')"><td>Campagne publicitaire basique</td><td><span class="price-val">15 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('Campagne publicitaire standard','30 000 FCFA')"><td>Campagne publicitaire standard</td><td><span class="price-val">30 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('Campagne publicitaire avancée','50 000 FCFA')"><td>Campagne publicitaire avancée</td><td><span class="price-val">50 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('Gestion publicitaire 7 jours','25 000 FCFA')"><td>Gestion publicitaire 7 jours</td><td><span class="price-val">25 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('Gestion publicitaire 30 jours','80 000 FCFA')"><td>Gestion publicitaire 30 jours</td><td><span class="price-val">80 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('Promotion entreprise locale','à partir de 20 000 FCFA')"><td>Promotion entreprise locale</td><td><span class="price-val">à partir de 20 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('Promotion page Facebook','à partir de 15 000 FCFA')"><td>Promotion page Facebook</td><td><span class="price-val">à partir de 15 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('Promotion compte TikTok','à partir de 15 000 FCFA')"><td>Promotion compte TikTok</td><td><span class="price-val">à partir de 15 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('Promotion chaîne YouTube','à partir de 20 000 FCFA')"><td>Promotion chaîne YouTube</td><td><span class="price-val">à partir de 20 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+        <tr onclick="orderVia('Promotion produit ou service','à partir de 10 000 FCFA')"><td>Promotion produit ou service</td><td><span class="price-val">à partir de 10 000 FCFA <i class="fa-brands fa-whatsapp"></i></span></td></tr>
+      </tbody></table>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg-2); padding-top:80px; padding-bottom:80px;">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Nos garanties</span>
+      <h2>Acheter en toute confiance</h2>
+    </div>
+  </div>
+  <div class="guarantee-grid reveal">
+    <div class="guarantee-card"><i class="fa-solid fa-lock"></i><h3>Aucun mot de passe requis</h3><p>Nous ne demandons jamais vos identifiants. Seul votre lien ou nom d'utilisateur public est nécessaire.</p></div>
+    <div class="guarantee-card"><i class="fa-solid fa-rotate"></i><h3>Réapprovisionnement 60 jours</h3><p>En cas de baisse anormale, nous complétons votre commande gratuitement pendant 60 jours.</p></div>
+    <div class="guarantee-card"><i class="fa-solid fa-hand-holding-dollar"></i><h3>Satisfait ou remboursé</h3><p>Si votre commande n'est pas livrée comme convenu, vous êtes remboursé.</p></div>
+    <div class="guarantee-card"><i class="fa-solid fa-user-secret"></i><h3>Discrétion totale</h3><p>Votre commande reste confidentielle, sans aucune mention de notre marque sur votre profil.</p></div>
+  </div>
+  <div class="container" style="margin-top:44px;">
+    <div class="pay-row reveal">
+      <div class="pay-pill"><i class="fa-solid fa-mobile-screen"></i> Orange Money</div>
+      <div class="pay-pill"><i class="fa-solid fa-mobile-screen"></i> MTN Money</div>
+      <div class="pay-pill"><i class="fa-solid fa-mobile-screen"></i> Moov Money</div>
+      <div class="pay-pill"><i class="fa-solid fa-mobile-screen"></i> Wave</div>
+      <div class="pay-pill"><i class="fa-solid fa-lock"></i> Paiement chiffré SSL</div>
+    </div>
+  </div>
+</section>
+
+<section id="suivi">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Suivi de commande</span>
+      <h2>Où en est votre commande ?</h2>
+      <p>Entrez votre numéro de commande (reçu par WhatsApp après achat) pour suivre son avancement.</p>
+    </div>
+    <div class="track-box reveal">
+      <div class="track-form">
+        <input type="text" id="trackInput" placeholder="Ex. HA-20260714-0842">
+        <button class="btn btn-gold" onclick="trackOrder()">Suivre ma commande</button>
+      </div>
+      <div class="track-result" id="trackResult">
+        <div class="track-steps">
+          <div class="track-step done"><div class="dot"><i class="fa-solid fa-check"></i></div><p>Commande reçue</p></div>
+          <div class="track-step done"><div class="dot"><i class="fa-solid fa-check"></i></div><p>Paiement confirmé</p></div>
+          <div class="track-step done"><div class="dot"><i class="fa-solid fa-spinner"></i></div><p>En cours de livraison</p></div>
+          <div class="track-step"><div class="dot">4</div><p>Terminé</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <span class="eyebrow">Pourquoi nous choisir</span>
+      <h2>L'exigence au service de votre image</h2>
+    </div>
+  </div>
+  <div class="why-grid reveal">
+    <div class="why-card"><i class="fa-solid fa-gem"></i><h3>Qualité</h3><p>Abonnés réels et haute qualité, sélectionnés avec soin.</p></div>
+    <div class="why-card"><i class="fa-solid fa-lock"></i><h3>Sécurité</h3><p>Un service sécurisé, sans jamais demander vos identifiants.</p></div>
+    <div class="why-card"><i class="fa-solid fa-bolt"></i><h3>Livraison rapide</h3><p>Chaque commande est traitée rapidement, dans les meilleurs délais.</p></div>
+    <div class="why-card"><i class="fa-solid fa-handshake"></i><h3>Accompagnement</h3><p>Une assistance disponible avant et après votre commande.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Le processus</span>
+      <h2>Comment ça marche</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><div class="step-num">01</div><h3>Choisissez votre service</h3><p>Parcourez nos offres et sélectionnez celle qui correspond à votre besoin.</p></div>
+      <div class="step"><div class="step-num">02</div><h3>Effectuez le paiement</h3><p>Réglez simplement via Mobile Money (Orange, MTN, Moov, Wave).</p></div>
+      <div class="step"><div class="step-num">03</div><h3>Envoyez votre lien</h3><p>Partagez le lien de votre profil ou de votre publication — jamais votre mot de passe.</p></div>
+      <div class="step"><div class="step-num">04</div><h3>Recevez votre commande</h3><p>Votre commande est livrée rapidement, avec un numéro de suivi.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <span class="eyebrow">Témoignages</span>
+      <h2>Ce que disent nos clients</h2>
+    </div>
+    <div class="rating-badge reveal">
+      <div class="rating-num">4,9/5</div>
+      <div>
+        <div class="rating-stars">★★★★★</div>
+        <div class="rating-sub">Basé sur plus de 1 200 avis clients</div>
+      </div>
+    </div>
+    <div class="carousel-wrap reveal">
+      <div class="carousel-track" id="track">
+        <div class="testi"><div class="testi-inner"><div class="stars">★★★★★</div><p class="quote">Excellent service, livraison rapide, très satisfait du résultat sur ma page.</p><div class="testi-name">— Aïcha K., commerçante</div></div></div>
+        <div class="testi"><div class="testi-inner"><div class="stars">★★★★★</div><p class="quote">Un accompagnement sérieux du début à la fin. Je recommande sans hésiter.</p><div class="testi-name">— Yves T., créateur de contenu</div></div></div>
+        <div class="testi"><div class="testi-inner"><div class="stars">★★★★★</div><p class="quote">Rapide, professionnel et discret. Exactement ce qu'il me fallait.</p><div class="testi-name">— Sarah D., entrepreneure</div></div></div>
+      </div>
+      <div class="carousel-dots" id="dots"></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2>Tout ce qu'il faut savoir</h2>
+    </div>
+    <div class="reveal" style="max-width:760px;">
+      <div class="faq-item">
+        <div class="faq-q">Les abonnés sont-ils réels ? <i class="fa-solid fa-plus"></i></div>
+        <div class="faq-a"><p>Nous privilégions des profils de haute qualité afin de garantir une croissance crédible de votre compte.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Faut-il donner mon mot de passe ? <i class="fa-solid fa-plus"></i></div>
+        <div class="faq-a"><p>Non, jamais. Nous ne demandons que le lien public de votre profil ou de votre publication.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Combien de temps dure la livraison ? <i class="fa-solid fa-plus"></i></div>
+        <div class="faq-a"><p>La majorité des commandes sont traitées rapidement, généralement sous 24 à 48h selon le service choisi.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Le paiement est-il sécurisé ? <i class="fa-solid fa-plus"></i></div>
+        <div class="faq-a"><p>Oui, les paiements se font via Mobile Money (Orange Money, MTN Money, Moov Money, Wave), sans partage de vos identifiants réseaux sociaux.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Que se passe-t-il si les chiffres baissent ? <i class="fa-solid fa-plus"></i></div>
+        <div class="faq-a"><p>Vous bénéficiez d'un réapprovisionnement gratuit pendant 60 jours après la livraison.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Puis-je commander plusieurs services ? <i class="fa-solid fa-plus"></i></div>
+        <div class="faq-a"><p>Bien sûr, vous pouvez combiner plusieurs services selon vos objectifs de visibilité.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contact</span>
+      <h2>Discutons de votre projet</h2>
+    </div>
+    <div class="contact-grid reveal">
+      <div>
+        <div class="contact-info-item"><i class="fa-solid fa-phone"></i><div><h4>Téléphone / WhatsApp</h4><p>+225 07 14 37 17 52</p></div></div>
+        <div class="contact-info-item"><i class="fa-solid fa-clock"></i><div><h4>Disponibilité</h4><p>Réponse rapide, 7 jours sur 7</p></div></div>
+        <div class="contact-info-item"><i class="fa-solid fa-shield-halved"></i><div><h4>Confidentialité</h4><p>Vos informations restent privées et sécurisées</p></div></div>
+      </div>
+      <form onsubmit="event.preventDefault(); alert('Message envoyé.');">
+        <div class="field"><label>Nom</label><input type="text" placeholder="Votre nom" required></div>
+        <div class="field"><label>Téléphone</label><input type="tel" placeholder="+225 ..." required></div>
+        <div class="field"><label>Email</label><input type="email" placeholder="vous@email.com"></div>
+        <div class="field"><label>Message</label><textarea placeholder="Décrivez votre besoin"></textarea></div>
+        <button class="btn btn-gold" type="submit" style="width:100%; justify-content:center;">Envoyer</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="brand">
+        <div class="seal">HA</div>
+        <div><div class="brand-text">HAIDEN <span>ANGE</span></div><div style="font-size:12.5px; color:var(--muted); margin-top:2px;">Digital Growth Expert</div></div>
+      </div>
+      <div class="footer-links">
+        <a href="#accueil">Accueil</a>
+        <a href="#services">Services</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#suivi">Suivi</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="pay-row" style="margin-bottom:30px;">
+      <div class="pay-pill"><i class="fa-solid fa-mobile-screen"></i> Orange Money</div>
+      <div class="pay-pill"><i class="fa-solid fa-mobile-screen"></i> MTN Money</div>
+      <div class="pay-pill"><i class="fa-solid fa-mobile-screen"></i> Moov Money</div>
+      <div class="pay-pill"><i class="fa-solid fa-mobile-screen"></i> Wave</div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 HAIDEN ANGE — Tous droits réservés.</span>
+      <span>Conçu avec exigence.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/2250714371752" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<button class="back-top" id="backTop" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i></button>
+<div class="toast" id="toast">
+  <i class="fa-solid fa-circle-check icon"></i>
+  <p id="toastText">Aïcha K. vient de commander <span>2 000 abonnés Instagram</span></p>
+</div>
+
+<div class="mobile-cta">
+  <a href="#tarifs" class="m1">Voir les tarifs</a>
+  <a href="https://wa.me/2250714371752" target="_blank" class="m2"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+</div>
+
+<script>
+document.querySelectorAll('.price-tab').forEach(tab=>{
+  tab.addEventListener('click', ()=>{
+    document.querySelectorAll('.price-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.price-panel').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.tab).classList.add('active');
+  });
+});
+
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+menuToggle.addEventListener('click', ()=>{
+  mobileMenu.classList.toggle('open');
+  menuToggle.innerHTML = mobileMenu.classList.contains('open') ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+});
+mobileMenu.querySelectorAll('a').forEach(a=>{
+  a.addEventListener('click', ()=>{
+    mobileMenu.classList.remove('open');
+    menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+  });
+});
+
+function orderVia(desc, price){
+  const msg = encodeURIComponent(`Bonjour HAIDEN ANGE, je souhaite commander : ${desc} (${price}).`);
+  window.open(`https://wa.me/2250714371752?text=${msg}`, '_blank');
+}
+
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const q = item.querySelector('.faq-q');
+  const a = item.querySelector('.faq-a');
+  q.addEventListener('click', ()=>{
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open'); i.querySelector('.faq-a').style.maxHeight=null;});
+    if(!isOpen){ item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
+  });
+});
+
+const track = document.getElementById('track');
+const dotsWrap = document.getElementById('dots');
+const slides = document.querySelectorAll('.testi');
+let current = 0;
+slides.forEach((_,i)=>{
+  const d = document.createElement('div');
+  d.className = 'dot2' + (i===0?' active':'');
+  d.addEventListener('click', ()=>goTo(i));
+  dotsWrap.appendChild(d);
+});
+function goTo(i){
+  current = i;
+  track.style.transform = `translateX(-${i*100}%)`;
+  document.querySelectorAll('.dot2').forEach((d,idx)=>d.classList.toggle('active', idx===i));
+}
+setInterval(()=>{ goTo((current+1)%slides.length); }, 5000);
+
+const backTop = document.getElementById('backTop');
+window.addEventListener('scroll', ()=>{
+  backTop.classList.toggle('show', window.scrollY > 500);
+});
+backTop.addEventListener('click', ()=>window.scrollTo({top:0, behavior:'smooth'}));
+
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
+}, {threshold:0.15});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+function animateCount(el){
+  const target = parseInt(el.dataset.count, 10);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1600;
+  const start = performance.now();
+  function tick(now){
+    const p = Math.min((now-start)/duration, 1);
+    const eased = 1 - Math.pow(1-p, 3);
+    const val = Math.round(target * eased);
+    el.textContent = (target >= 1000 ? val.toLocaleString('fr-FR') : val) + suffix;
+    if(p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+const statObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){ animateCount(e.target); statObserver.unobserve(e.target); }
+  });
+}, {threshold:0.4});
+document.querySelectorAll('.stat-num').forEach(el=>statObserver.observe(el));
+
+const chips = document.querySelectorAll('.calc-chip');
+const qtySlider = document.getElementById('qtySlider');
+const qtyOut = document.getElementById('qtyOut');
+const calcPrice = document.getElementById('calcPrice');
+const calcSub = document.getElementById('calcSub');
+const calcOrderBtn = document.getElementById('calcOrderBtn');
+let activeRate = 9, activeLabel = 'abonnés Instagram';
+
+function updateCalc(){
+  const qty = parseInt(qtySlider.value, 10);
+  qtyOut.textContent = qty.toLocaleString('fr-FR');
+  const discount = qty > 10000 ? 0.85 : 1;
+  const price = Math.round((qty * activeRate * discount) / 100) * 100;
+  calcPrice.textContent = price.toLocaleString('fr-FR') + ' FCFA';
+  calcSub.textContent = qty.toLocaleString('fr-FR') + ' ' + activeLabel;
+  calcOrderBtn.onclick = (e)=>{
+    e.preventDefault();
+    orderVia(qty.toLocaleString('fr-FR') + ' ' + activeLabel, price.toLocaleString('fr-FR') + ' FCFA');
+  };
+}
+chips.forEach(chip=>{
+  chip.addEventListener('click', ()=>{
+    chips.forEach(c=>c.classList.remove('active'));
+    chip.classList.add('active');
+    activeRate = parseFloat(chip.dataset.rate);
+    activeLabel = chip.dataset.label;
+    const max = parseInt(chip.dataset.max, 10) || 10000;
+    qtySlider.max = max;
+    if(parseInt(qtySlider.value,10) > max) qtySlider.value = max;
+    updateCalc();
+  });
+});
+qtySlider.addEventListener('input', updateCalc);
+updateCalc();
+
+function trackOrder(){
+  const val = document.getElementById('trackInput').value.trim();
+  if(!val){ return; }
+  document.getElementById('trackResult').classList.add('show');
+}
+
+const toastMessages = [
+  ['Aïcha K.', '2 000 abonnés Instagram'],
+  ['Yves T.', '5 000 vues TikTok'],
+  ['Moussa B.', '1 000 likes Facebook'],
+  ['Sarah D.', 'une campagne publicitaire'],
+  ['Konan R.', '10 000 vues YouTube']
+];
+let toastIndex = 0;
+function showToast(){
+  const toast = document.getElementById('toast');
+  const [name, item] = toastMessages[toastIndex % toastMessages.length];
+  document.getElementById('toastText').innerHTML = `${name} vient de commander <span>${item}</span>`;
+  toast.classList.add('show');
+  toastIndex++;
+  setTimeout(()=>toast.classList.remove('show'), 4500);
+}
+setTimeout(showToast, 4000);
+setInterval(showToast, 14000);
+
+if(new URLSearchParams(window.location.search).get('welcome') === '1'){
+  const banner = document.getElementById('welcomeBanner');
+  banner.style.display = 'block';
+  document.querySelector('.hero').style.paddingTop = '190px';
+  setTimeout(()=>{ document.getElementById('tarifs').scrollIntoView({behavior:'smooth'}); }, 900);
+  setTimeout(()=>{ banner.style.display = 'none'; document.querySelector('.hero').style.paddingTop = '150px'; }, 6000);
+}
+</script>
+
+</body>
+</html>
